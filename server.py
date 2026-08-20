@@ -108,4 +108,4 @@ def ask(payload: AskIn):
         raise HTTPException(status_code=400, detail="Question is too long.")
 
     answer_text, sources = rag_core.answer(question)
-    return {"answer": answer_text, "sources": sources}
+    return {"answer": answer_text}
